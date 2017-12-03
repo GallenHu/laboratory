@@ -11,6 +11,6 @@ find $backupdir -name "database*.sql.gz" -type f -mtime +7 -exec rm {} ; > /dev/
 
 # git
 cd $backupdir
-git add .
+git add -A
 git commit -m $time
 git push origin master
