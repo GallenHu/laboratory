@@ -15,10 +15,16 @@ serverspeeder2(){
         /serverspeeder/bin/serverSpeeder.sh status
 }
 
+# 55R
+ssr(){
+        /etc/init.d/shadowsocks status
+}
+
 # 开始
 echo -e "
 1. 锐速状态centos
 2. 锐速状态debian
+3. 55R
 "
 echo && read -e -p "请输入数字 [1-15]：" num
 case "$num" in
@@ -27,6 +33,9 @@ case "$num" in
         ;;
         2)
         serverspeeder2
+        ;;
+        3)
+        ssr
         ;;
         *)
         echo -e "${Error} 请输入正确的数字 [1-15]"
