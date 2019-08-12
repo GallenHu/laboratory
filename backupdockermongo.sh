@@ -1,5 +1,8 @@
 #!/bin/bash
 #
+# RESTORE
+# mongorestore -uroot -p hinoteapp -d noteapp --dir /tmp/noteapp/ --authenticationDatabase admin
+#
 backupdir=/home/data/sql_backup/
 time=` date +%Y%m%d%H%M%S `
 passwd=examplepassword
