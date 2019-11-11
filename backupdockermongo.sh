@@ -9,9 +9,9 @@ passwd=examplepassword
 dbname=noteapp
 dockername=hinote_mongo
 
-docker exec -it $dockername mongodump -h 127.0.0.1 --port 27017 -u=root -p=$passwd --authenticationDatabase admin -d $dbname -o /tmp
+docker exec -i $dockername mongodump -h 127.0.0.1 --port 27017 -u=root -p=$passwd --authenticationDatabase admin -d $dbname -o /tmp
 
-docker exec -it $dockername tar -zcvf /tmp/$dbname$time.tar.gz /tmp/$dbname
+docker exec -i $dockername tar -zcvf /tmp/$dbname$time.tar.gz /tmp/$dbname
 
 docker cp $dockername:/tmp/$dbname$time.tar.gz $backupdir
 
