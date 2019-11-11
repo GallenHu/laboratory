@@ -7,6 +7,9 @@
 
 ```
 0 0,12 * * * /bin/bash /your_path_to/bakmysql.sh
+
+# 每分钟执行一次脚本
+*/1 * * * * sh /your_path_to/bakmysql.sh
 ```
 
 ## 查看树莓派温度状态等
